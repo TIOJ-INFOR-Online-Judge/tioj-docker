@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+    web:
+        build: 
+            context: ./tioj
+            args:
+                MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASSWORD
+                KEY: $KEY
+                TOKEN: $TOKEN
+        environment:
+            - RAILS_ENV=production
+        depends_on:
+            - db
+        networks:
+            backend:
+                aliases:
+                    - tioj
+        ports:
+            - "7122:4000"
+        container_name: "tioj_web"
+    db:
+        image: mysql:5
+        volumes:
+            - ./database/tioj_production.sql:/docker-entrypoint-initdb.d/tioj_production.sql
+        environment:
+            - MYSQL_ROOT_PASSWORD=$MYSQL_ROOT_PASSWORD
+            - MYSQL_DATABASE=tioj_production
+        container_name: "tioj_db"
+        networks:
+            backend:
+                aliases:
+                    - database
+networks:
+    backend:
+        driver: bridge
