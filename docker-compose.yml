@@ -31,6 +31,15 @@ services:
             backend:
                 aliases:
                     - database
+    judge:
+        build:
+            context: ./miku
+            args: 
+                KEY: $KEY
+        container_name: "tioj_judge"
+        privileged: true
+        networks:
+            backend:
 networks:
     backend:
         driver: bridge
