@@ -52,4 +52,6 @@ RUN mkdir public/announcement &&\
 RUN rake assets:precompile
 
 COPY run_server.sh /tioj/run_server.sh
+RUN chmod +x /tioj/run_server.sh
+
 CMD /tioj/run_server.sh
