@@ -10,8 +10,7 @@ RUN apt-get update &&\
 RUN git clone https://github.com/adrien1018/tioj /tioj
 WORKDIR /tioj
 
-RUN gem install rails -v 4.2.11
-RUN bundle install
+RUN gem install rails -v 4.2.11 && bundle install
 
 ARG MYSQL_ROOT_PASSWORD
 ENV PASSWORD=$MYSQL_ROOT_PASSWORD
