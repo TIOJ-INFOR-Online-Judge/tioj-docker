@@ -23,7 +23,7 @@ services:
         image: mysql:5
         volumes:
             - ./database/tioj_production.sql:/docker-entrypoint-initdb.d/tioj_production.sql
-            - ./database:/var/lib/mysql
+            - ./database/volumes:/var/lib/mysql
         environment:
             - MYSQL_ROOT_PASSWORD=$MYSQL_ROOT_PASSWORD
             - MYSQL_DATABASE=tioj_production
