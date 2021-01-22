@@ -10,9 +10,9 @@ RUN apt-get update &&\
     --slave /usr/bin/gcc-ar gcc-ar /usr/bin/gcc-ar-8 \
     --slave /usr/bin/gcc-ranlib gcc-ranlib /usr/bin/gcc-ranlib-8
 
-RUN git clone https://github.com/adrien1018/miku /miku
+RUN git clone https://github.com/oToToT/miku /miku
 WORKDIR /miku
-RUN git submodule update --init
+RUN git checkout isolate-upgrade-pure && git submodule update --init
 
 ARG KEY
 ENV KEY=$KEY
