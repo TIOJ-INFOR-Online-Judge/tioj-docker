@@ -1,14 +1,14 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 MAINTAINER oToToT
 
-# use gcc 8 as default
+# use gcc 9 as default
 RUN apt-get update &&\
-    apt-get install -y curl g++-8 ghc git libcap-dev make openssl python python3 python3.7 &&\
-    update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 60 \
-    --slave /usr/bin/g++ g++ /usr/bin/g++-8 \
-    --slave /usr/bin/gcc-nm gcc-nm /usr/bin/gcc-nm-8 \
-    --slave /usr/bin/gcc-ar gcc-ar /usr/bin/gcc-ar-8 \
-    --slave /usr/bin/gcc-ranlib gcc-ranlib /usr/bin/gcc-ranlib-8
+    apt-get install -y libcap-dev libcurl4-openssl-dev make g++-9 ghc git openssl python python3 python3.7 &&\
+    update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 60 \
+    --slave /usr/bin/g++ g++ /usr/bin/g++-9 \
+    --slave /usr/bin/gcc-nm gcc-nm /usr/bin/gcc-nm-9 \
+    --slave /usr/bin/gcc-ar gcc-ar /usr/bin/gcc-ar-9 \
+    --slave /usr/bin/gcc-ranlib gcc-ranlib /usr/bin/gcc-ranlib-9
 
 RUN git clone https://github.com/oToToT/miku /miku
 WORKDIR /miku
