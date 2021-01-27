@@ -2,7 +2,7 @@
 
 ## Introduction ##
 
-This is a dockerized version of [TIOJ](https://tioj.infor.org/), it will clone the [adrien1018](https://github.com/adrien1018)'s latest [TIOJ repo](https://github.com/adrien1018/tioj) and [miku repo](https://github.com/adrien1018/miku) to build a TIOJ.
+This is a dockerized version of [TIOJ](https://tioj.infor.org/), it will clone the [adrien1018](https://github.com/adrien1018)'s latest [TIOJ repo](https://github.com/adrien1018/tioj) and [miku repo](https://github.com/oToToT/miku) to build a TIOJ.
 
 ## Notice ##
 
@@ -20,7 +20,7 @@ To build in mode other than **production**, please change L12, L23, L25 in `dock
 
 ## Judge Management & Other ##
 
-Please refer to [https://github.com/adrien1018/tioj](https://github.com/adrien1018/tioj) or open an issue [here](https://github.com/ototot/judgegirl-scoreboard/issues) for more detail.
+Please refer to [https://github.com/adrien1018/tioj](https://github.com/adrien1018/tioj) or open an issue [here](https://github.com/oToToT/tioj-docker/issues) for more detail.
 
 Also, Pull Request is welcomed.
 
