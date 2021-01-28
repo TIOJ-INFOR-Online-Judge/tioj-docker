@@ -7,7 +7,7 @@ RUN apt-get update &&\
                        imagemagick\
                        netcat
 
-RUN git clone https://github.com/adrien1018/tioj /tioj
+RUN git clone https://github.com/TIOJ-INFOR-Online-Judge/tioj /tioj
 WORKDIR /tioj
 
 RUN gem install rails -v 4.2.11 && bundle install
