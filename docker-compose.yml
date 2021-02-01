@@ -10,6 +10,12 @@ services:
                 TOKEN: $TOKEN
         environment:
             - RAILS_ENV=production
+        volumes:
+            - ./tioj/volumes/td:/tioj/td
+            - ./tioj/volumes/log:/tioj/log
+            - ./tioj/volumes/uploads:/tioj/public/uploads
+            - ./tioj/volumes/announcement:/tioj/public/announcement
+            - ./tioj/volumes/assets:/tioj/assets
         depends_on:
             - db
         networks:

@@ -45,9 +45,6 @@ ENV KEY=$KEY
 RUN echo "Tioj::Application.config.secret_token = \"$TOKEN\"" > config/initializers/secret_token.rb &&\
     echo "Tioj::Application.config.fetch_key = \"$KEY\"" > config/initializers/fetch_key.rb
 
-RUN mkdir public/announcement &&\
-    echo -n '{"name":"","message":""}' > public/announcement/anno
-
 RUN rake assets:precompile
 
 COPY run_server.sh /tioj/run_server.sh
