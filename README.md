@@ -1,5 +1,7 @@
 # TIOJ Docker #
 
+This repo is archived since it has been merged into [the main TIOJ repo](https://github.com/TIOJ-INFOR-Online-Judge/tioj).
+
 ## Introduction ##
 
 This is a dockerized version of [TIOJ](https://tioj.infor.org/), it will clone the latest [TIOJ repo](https://github.com/TIOJ-INFOR-Online-Judge/tioj) and [miku repo](https://github.com/TIOJ-INFOR-Online-Judge/miku) to build a TIOJ.
